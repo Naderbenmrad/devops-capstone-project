@@ -42,6 +42,7 @@ jobs:
 
       - name: Run unit tests with coverage
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
           coverage run -m nose
           coverage report
           coverage xml
